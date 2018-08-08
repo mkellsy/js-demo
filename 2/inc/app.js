@@ -36,9 +36,6 @@ window.onload = function () {
         myRequest.AddRequestVariable("Format", "JSON");
         myRequest.AddParameter("ProductID", id, ECP.EC_Operator.Equals);
 
-        Details.innerHTML = "";
-        Details.parentElement.style.display = "none";
-
         ECP.API2Rs(myRequest).then(function (adoRs) {
             if (!adoRs.EOF) {
                 var Html = "";
@@ -64,6 +61,9 @@ window.onload = function () {
 
                 Details.innerHTML = Html;
                 Details.parentElement.style.display = "block";
+            } else {
+                Details.innerHTML = "";
+                Details.parentElement.style.display = "none";
             }
         });
     }
