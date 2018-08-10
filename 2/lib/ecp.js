@@ -1059,7 +1059,7 @@ var ECP;
         Submit() {
             let Me = this;
             return new Promise(function (resolve, reject) {
-                let url = "https://api.encompass8.com/aspx1/API.ashx?APICommand=" + encodeURIComponent(Me.Command) + "&EncompassID=Pioneer1807";
+                let url = "https://api.encompass8.com/aspx1/API.ashx?APICommand=" + encodeURIComponent(Me.Command) + "&EncompassID=Pioneer1808";
                 if (Me.Public) {
                     url += "&APIToken=" + encodeURIComponent(Me.APIToken);
                 }
