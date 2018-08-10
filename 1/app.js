@@ -1,5 +1,5 @@
 window.onload = function () {
-    GetJSON("https://api.encompass8.com/aspx1/API.ashx?APIToken=8a2769debbda2273c80fe9c59c310299&EncompassID=Pioneer1807&APICommand=Kellsy_GetProductList&Format=JSON").then(function(data) {
+    GetJSON("https://api.encompass8.com/aspx1/API.ashx?APIToken=8a2769debbda2273c80fe9c59c310299&EncompassID=Pioneer1808&APICommand=Kellsy_GetProductList&Format=JSON").then(function(data) {
         data = data.Export.Table.Row;
 
         var html = "";
@@ -25,7 +25,7 @@ window.onload = function () {
 };
 
 var GetDetails = function (id) {
-    GetJSON("https://api.encompass8.com/ECP_18.08_A/aspx1/API.ashx?APIToken=8a2769debbda2273c80fe9c59c310299&EncompassID=Pioneer1807&Format=JSON&APICommand=Kellsy_GetProductDetail&Parameters=F:ProductID~V:" + id + "~O:E").then(function(data) {
+    GetJSON("https://api.encompass8.com/ECP_18.08_A/aspx1/API.ashx?APIToken=8a2769debbda2273c80fe9c59c310299&EncompassID=Pioneer1808&Format=JSON&APICommand=Kellsy_GetProductDetail&Parameters=F:ProductID~V:" + id + "~O:E").then(function(data) {
         data = data.Export.Table.Row;
 
         var details = document.getElementById("details");
