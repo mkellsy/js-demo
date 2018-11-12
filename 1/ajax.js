@@ -8,7 +8,7 @@ var GetJSON = function (url) {
 
         // Define what to do at the different states of the AJAX call
         xhr.onload = function () {
-            if (this.status >- 200 && this.status < 300) {
+            if (this.status >= 200 && this.status < 300) {
 
                 // Test for JSON data
                 if (IsJSON(xhr.responseText)) {
